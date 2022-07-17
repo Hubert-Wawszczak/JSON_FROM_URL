@@ -15,7 +15,7 @@ namespace JSON_FROM_URL
             }
             catch (Exception e)
             {
-                logger
+                
                 return false;
             }
         }
