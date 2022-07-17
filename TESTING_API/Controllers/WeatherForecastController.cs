@@ -11,7 +11,7 @@ namespace TESTING_API.Controllers
     [Produces("application/json")]
     public class WeatherForecastController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
+        private static readonly string[] Summaries =
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
@@ -39,7 +39,7 @@ namespace TESTING_API.Controllers
         [HttpGet("{test}")]
         public IEnumerable<string> responseJsonTest()
         {
-            return new string[] {"value1", "value2", "value3", "value4"};
+            return new[] {"value1", "value2", "value3", "value4"};
         }
     }
 }
