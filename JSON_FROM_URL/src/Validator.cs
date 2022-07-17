@@ -26,13 +26,6 @@ namespace JSON_FROM_URL
         {
             try
             {
-                if (url == null) return false;
-                var ping = new Ping();
-
-                var result = ping.Send(url, 4000);
-
-                if (result is not {Status: IPStatus.Success}) return false;
-
                 var request = WebRequest.Create(url);
                 request.Timeout = 4000;
                 request.GetResponse();
@@ -58,11 +51,22 @@ namespace JSON_FROM_URL
                     return true;
                 }
             }
+            catch (IOException ie)
+            {
+                return true;
+            }
             catch (Exception e)
             {
                 return false;
             }
 
+            return true;
+        }
+
+        public bool FileExists(string path)
+        {
+            if (File.Exists(path))
+                return true;
             return false;
         }
     }

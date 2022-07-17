@@ -6,5 +6,7 @@ namespace JSON_FROM_URL.models
         public bool validateUrlConnection(string url);
 
         public bool validatorPathOrCreate(string path);
+
+        public bool FileExists(string path);
     }
 }

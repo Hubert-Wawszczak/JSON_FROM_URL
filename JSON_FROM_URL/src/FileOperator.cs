@@ -9,11 +9,13 @@ namespace JSON_FROM_URL
         {
             try
             {
-                File.WriteAllText(path, data);
+                File.AppendAllText(path, data);
+
                 return true;
             }
             catch (Exception e)
             {
+                logger
                 return false;
             }
         }
