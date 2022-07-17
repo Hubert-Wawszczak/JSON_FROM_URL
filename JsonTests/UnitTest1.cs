@@ -1,7 +1,6 @@
-using System;
 using Xunit;
 
-namespace UnitTests
+namespace JsonTests
 {
     public class UnitTest1
     {
