@@ -6,7 +6,8 @@ namespace JSON_FROM_URL
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var manager = new Manager();
+            manager.Run();
         }
     }
 }
