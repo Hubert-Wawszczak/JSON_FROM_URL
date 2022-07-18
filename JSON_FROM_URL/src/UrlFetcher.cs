@@ -1,16 +1,32 @@
 using System;
-using System.Diagnostics;
 using System.Net;
-using System.Net.Http;
 
 namespace JSON_FROM_URL
 {
     public class UrlFetcher
     {
+        private readonly Logger log = Logger.GetLogger();
+
         public string Get(string apiUri)
         {
-            var json = new WebClient().DownloadString(apiUri);
-            return json;
+            try
+            {
+                var json = new WebClient().DownloadString(apiUri);
+                log.LogMessage("Downloaded json from: " + apiUri);
+                return json;
+            }
+            catch (System.Net.WebException we)
+            {   
+                log.LogMessage("Something wrong occured during fetching data",4);
+                Console.WriteLine(we);
+                return null;
+            }
+            catch (Exception e)
+            {
+                log.LogMessage("Something wrong occured during fetching data",4);
+                Console.WriteLine(e);
+                return null;
+            }
         }
     }
 }
