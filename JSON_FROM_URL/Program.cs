@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace JSON_FROM_URL
+﻿namespace JSON_FROM_URL
 {
     internal class Program
     {
