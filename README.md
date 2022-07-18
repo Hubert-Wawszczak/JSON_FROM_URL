@@ -10,6 +10,9 @@ Test are in JsonTest
 TESTING_API IS ONLY FOR USING LOCALHOST WEBAPI 
 
 
+   
+      
+# Task
 
 Przygotuj projekt aplikacji konsolowej w .NET 5.0, która w najoptymalniejszy sposób dla danej maszyny pobierze dane JSON z adresów URL zadanych na stdin. Zaprojektuj klasy potrzebne do realizacji zadania i napisz do nich testy jednostkowe.
  
